@@ -33,11 +33,12 @@
     <script type="text/javascript">
       var $list = $("#colours");
 
-      $.get("https://rawgit.com/lildude/linguist-free-colours/master/avail-colours.yml", function(data) {
+      $.get("https://raw.githubusercontent.com/lildude/linguist-free-colours/master/avail-colours.yml", function(data) {
         var colours = jsyaml.safeLoad(data);
 
         for(var colour in colours) {
-          $list.append('<li style="border-bottom-color:#' + colour + '">#' + colour + '</li>');
+          attr = colours[colour]
+          $list.append('<li style="border-bottom-color:#' + attr + '">#' + attr + '</li>');
         }
       });
 
