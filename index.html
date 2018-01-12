@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Available Linguist Colors</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.10.0/js-yaml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <style>
+      body {
+        font-family: "Heletica Neue", Helvetica, sans-serif;
+        font-size: 13px;
+      }
+
+      #colours {
+        list-style: none;
+      }
+
+      #colours li {
+        width: 180px;
+        float: left;
+        text-align: center;
+        padding: 0.5em 0;
+        margin: 0.25em;
+        font-weight: bold;
+        border-bottom: 12px solid #ccc;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    </style>
+  </head>
+  <body>
+    <ul id="colours"></ul>
+
+    <script type="text/javascript">
+      var $list = $("#colours");
+
+      $.get("https://rawgit.com/lildude/linguist-free-colours/master/avail-colours.yml", function(data) {
+        var colours = jsyaml.safeLoad(data);
+
+        for(var colour in colours) {
+          $list.append('<li style="border-bottom-color:#' + colour + '">#' + colour + '</li>');
+        }
+      });
+
+    </script>
+  </body>
+</html>
