@@ -4,6 +4,8 @@ This is a very quick, dirty, and hacky script to determine which colours are sti
 
 The finished product can be viewed at <https://lildude.github.io/linguist-free-colours/>.
 
+⚠️ The script is incredibly inefficient and takes well over 24 hours to run. No tears please. ⚠️
+
 ## Usage:
 
 ```
