@@ -40,5 +40,5 @@ while i < 16777215 do  # White
   i +=1
 end
 
-puts "\n#{free_colours.length} free colours"
+puts "\n#{@free_colours.length} free colours"
 File.open('avail-colours.yml', 'w') {|f| f.write @free_colours.to_yaml }
