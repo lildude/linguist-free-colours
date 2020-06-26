@@ -9,29 +9,23 @@ body {
 }
 
 #color-picker {
-  position: absolute;
-  left: 70px;
   background-color: white;
   height: 540px;
   width: 585px;
   border: solid 1px #ccc;
   padding: 5px;
+  margin: auto;
 }
 
 #color-input {
-  position: absolute;
-  right: 5px;
-  margin-left: 260px;
   height: 25px;
   font-size: 20px;
   width: 90px;
 }
 
 #color-label {
-  display: table-cell;
-  position: absolute;
   height: 30px;
-  width: 450px;
+  width: 480px;
   border: 1px solid #ccc;
   font-size: 20px;
   text-align: center;

@@ -7,11 +7,12 @@
   </head>
   <body>
     <h1>GitHub Linguist Colour Picker</h1>
-    <div id="color-picker">
-      <canvas id="color-block" height="500" width="585"></canvas>
-      <label for="color-input" id="color-label" style="background-color: white"></label>
-      <input pattern=".{7}" required id="color-input" type="text" value="#"/>
-    </div>
+    <p>Use your mouse to find a free colour, or enter it manually.</p>
+    <table id="color-picker">
+      <tr><td colspan="2"><canvas id="color-block" height="500" width="585"></canvas></td></tr>
+      <tr><td id="color-label" style="background-color: white"></td>
+          <td><input pattern=".{7}" required id="color-input" type="text" value="#"/></td></tr>
+    </table>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.10.0/js-yaml.min.js"></script>
     <script src="colour.js"></script>
     <script src="app.js"></script>
