@@ -1,47 +1,18 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Available Linguist Colors</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.10.0/js-yaml.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-
-    <style>
-      body {
-        font-family: "Heletica Neue", Helvetica, sans-serif;
-        font-size: 13px;
-      }
-
-      #colours {
-        list-style: none;
-      }
-
-      #colours li {
-        width: 180px;
-        float: left;
-        text-align: center;
-        padding: 0.5em 0;
-        margin: 0.25em;
-        font-weight: bold;
-        border-bottom: 12px solid #ccc;
-        white-space: nowrap;
-        text-overflow: ellipsis;
-      }
-    </style>
+    <title>GitHub Linguist Colour Picker</title>
+    <meta charset="utf-8"/>
+    <link rel="stylesheet" type="text/css" href="app.css" />
   </head>
   <body>
-    <ul id="colours"></ul>
-
-    <script type="text/javascript">
-      var $list = $("#colours");
-
-      $.get("https://raw.githubusercontent.com/lildude/linguist-free-colours/master/avail-colours.yml", function(data) {
-        var colours = jsyaml.safeLoad(data);
-
-        for(var colour in colours) {
-          attr = colours[colour]
-          $list.append('<li style="border-bottom-color:#' + attr + '">#' + attr + '</li>');
-        }
-      });
-
-    </script>
+    <h1>GitHub Linguist Colour Picker</h1>
+    <div id="color-picker">
+      <canvas id="color-block" height="500" width="585"></canvas>
+      <label for="color-input" id="color-label" style="background-color: white"></label>
+      <input pattern=".{7}" required id="color-input" type="text" value="#"/>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/js-yaml/3.10.0/js-yaml.min.js"></script>
+    <script src="colour.js"></script>
+    <script src="app.js"></script>
   </body>
-</html>
